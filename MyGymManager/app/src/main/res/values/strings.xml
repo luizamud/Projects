@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">My Gym Manager</string>
+
+
+    <string name="email">E-mail</string>
+
+    <string name="sobrenome">Sobrenome</string>
+    <string name="salvar_e_ir">Salvar e Ir</string>
+    <string name="limpar">Limpar</string>
+    <string name="termo">Concordo com os termos de uso</string>
+    <string name="cross_fit">Cross Fit</string>
+    <string name="musculacao">Musculação</string>
+    <string name="maratona">Maratona</string>
+    <string name="brazil">Brazil</string>
+    <string name="eua">Estados Unidos</string>
+    <string name="canada">Canada</string>
+    <string name="nivel_hi">Nivel Avançado</string>
+    <string name="nivel_medio">Nivel Medio</string>
+    <string name="nivel_iniciante">Nivel Iniciante</string>
+    <string name="selecione_o_seu_nivel_atletico">Selecione o seu nivel Atletico: </string>
+    <string name="escolha_sua_lingua_materna">Escolha sua lingua materna: </string>
+    <string name="seja_bem_vindo_ao_my_gym_manager">Seja Bem Vindo ao My Gym Manager</string>
+    <string name="cadastrar">Cadastrar</string>
+
+    <string name="entrar">Entrar</string>
+    <string name="usuario">Usuario</string>
+    <string name="senha">Senha</string>
+
+    <string name="nome">Nome</string>
+    <string name="termos">Tenho +18 e aceito o termo</string>
+    <string name="develop">Botao de Desenvolvimento</string>
+    <string name="atualizar_cadastro">Atualizar</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="peito">Peito</string>
+    <string name="cintura">Cintura</string>
+    <string name="quadril">Quadril</string>
+    <string name="recuperar">recuperar</string>
+    <string name="gravar_no_banco">Gravar no banco</string>
+    <string name="ler_no_banco">Ler no banco</string>
+    <string name="tudo_ok">Tudo Ok</string>
+
+
+</resources>

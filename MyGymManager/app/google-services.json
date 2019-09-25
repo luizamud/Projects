@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "707767027261",
+    "firebase_url": "https://tets-a561a.firebaseio.com",
+    "project_id": "tets-a561a",
+    "storage_bucket": "tets-a561a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707767027261:android:8799425db532bac4570c54",
+        "android_client_info": {
+          "package_name": "luizfelipemoralez.amuds.mygymmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707767027261-uu554s53ajavtkfhbm7qkuj8hm9mnoj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB6cbvg1bnWTRhQoHYu-SFDSu-_nKWinA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707767027261-uu554s53ajavtkfhbm7qkuj8hm9mnoj4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
