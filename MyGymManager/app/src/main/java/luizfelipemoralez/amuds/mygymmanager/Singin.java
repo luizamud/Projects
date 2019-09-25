@@ -11,8 +11,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.google.firebase.FirebaseError;
-
 public class Singin extends AppCompatActivity {
     private CheckBox temp_termos;
     private EditText temp_usuario;
@@ -25,7 +23,6 @@ public class Singin extends AppCompatActivity {
     private RadioButton temp_maratona;
     public FichaUsuario fichaUsuario;
     UsuarioCadastro user = new  UsuarioCadastro();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,36 +43,44 @@ public class Singin extends AppCompatActivity {
 
 
     public void sendSingIn(View view) {
-
-        if(verificaTexto() == true){
-              if( verificaCheckbox() == true){
-                 if(verificaRadioGroup() == true){
-                     Intent intent = new Intent(this,FichaUsuario.class);
-                     intent.putExtra("Usuario",temp_usuario.getText().toString());
-                     intent.putExtra("Nome",temp_nome.getText().toString());
-                     intent.putExtra("Sobrenome",temp_sobrenome.getText().toString());
-                     intent.putExtra("Senha",temp_senha.getText().toString());
-                     startActivity(intent);
-                 }else {
-                      verificaRadioGroup();
-                  }
-              }else{
-                  verificaCheckbox();
-              }
-          }else {
-              verificaTexto();
+          if(Verifica()){
+           startFicha();
           }
+    }
+    private boolean Verifica(){
+        boolean value = false;
+        if(verificaTexto()){
+            if( verificaCheckbox()){
+                if(verificaRadioGroup()){
+                    value = true;
+                }else {
+                    verificaRadioGroup();
+                }
+            }else{
+                verificaCheckbox();
+            }
+        }else {
+            verificaTexto();
+        }
+        return value;
+    }
+    private void startFicha(){
+            Intent intent = new Intent(this,FichaUsuario.class);
+                    intent.putExtra("Usuario",temp_usuario.getText().toString());
+                    intent.putExtra("Nome",temp_nome.getText().toString());
+                    intent.putExtra("Sobrenome",temp_sobrenome.getText().toString());
+                    intent.putExtra("Senha",temp_senha.getText().toString());
+            startActivity(intent);
     }
 
     public boolean verificaTexto(){
-
+        //Declaração de variaveis temporarias!
+        String aux_usuario = temp_usuario.getText().toString().trim();
+        String aux_nome = temp_nome.getText().toString();
+        String aux_sobrenome = temp_sobrenome.getText().toString();
+        String aux_senha = temp_senha.getText().toString();
+        String aux_aviso = " não pode ficar em branco";
         boolean param = false;
-       String aux_usuario = temp_usuario.getText().toString();
-       String aux_nome = temp_nome.getText().toString();
-       String aux_sobrenome = temp_sobrenome.getText().toString();
-       String aux_senha = temp_senha.getText().toString();
-       String aux_aviso = " não pode ficar em branco";
-
        if(!aux_usuario.equalsIgnoreCase("")&&!aux_usuario.equalsIgnoreCase("Usuario")){
             if(!aux_nome.equalsIgnoreCase("")&&!aux_nome.equalsIgnoreCase("Nome")){
                 if(!aux_sobrenome.equalsIgnoreCase("")&&!aux_sobrenome.equalsIgnoreCase("Sobrenome")){
@@ -98,7 +103,6 @@ public class Singin extends AppCompatActivity {
            temp_usuario.requestFocus();
 
        }
-
     return param;
     }
     public boolean verificaCheckbox(){
@@ -147,15 +151,5 @@ public class Singin extends AppCompatActivity {
         temp_termos.setChecked(false);
         temp_radio_manager.clearCheck();
     }
-    public void sendCreateUser(){
-        temp_usuario.setText("Usuario");
-        temp_nome.setText("Nome");
-        temp_sobrenome.setText("Sobrenome");
-        temp_senha.setText("Senha");
-        temp_termos.setChecked(false);
-        temp_radio_manager.clearCheck();
-    }
+
 }
-/**
- *
- */

@@ -98,8 +98,6 @@ public class FichaUsuario extends AppCompatActivity {
 
     public void criaFicha(){
         UsuarioCadastro temp_user = new UsuarioCadastro();
-        DAO dao = new DAO();
-        String path = "/users/";
         temp_user.setUsuario(this.usuario);
         temp_user.setNome(this.nome);
         temp_user.setSobrenome(this.sobrenome);
@@ -113,11 +111,8 @@ public class FichaUsuario extends AppCompatActivity {
         temp_user.setPanturrilha(Double.parseDouble(id_panturrilha.getText().toString()));
         temp_user.setBiceps(Double.parseDouble(id_biceps.getText().toString()));
         temp_user.setAntebraco(Double.parseDouble(id_antebraco.getText().toString()));
-        path = path+this.usuario;
-        dao.gravarBanco(temp_user,path);
-        Toast.makeText(this, "Salvo no banco", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_SHORT).show();
     }
-
 
 
     public void sendUpdateUser(View view) {
